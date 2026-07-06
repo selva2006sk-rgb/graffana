@@ -1,0 +1,44 @@
+                    Developer
+                        │
+                 git push code
+                        │
+                        ▼
+                 GitHub Repository
+                        │
+                GitHub Actions CI
+                        │
+      ┌─────────────────┴─────────────────┐
+      │                                   │
+Build Docker Images                Run Tests
+      │
+Push Images
+      │
+Docker Hub / Amazon ECR
+      │
+Update Kubernetes Manifest
+      │
+Git Commit
+      │
+      ▼
+ArgoCD detects change
+      │
+      ▼
+Deploy to AWS EKS
+      │
+ ┌──────────────┬──────────────┬──────────────┐
+ │              │              │
+Frontend     Backend      Database
+(React)      (Python)      (MySQL)
+ │              │              │
+ └──────────────┴──────────────┘
+             Kubernetes
+                    │
+Ingress + Load Balancer
+                    │
+              Internet Users
+                    │
+         Prometheus Scrapes Metrics
+                    │
+                Grafana Dashboard
+                    │
+              DevOps Monitoring
