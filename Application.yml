@@ -14,7 +14,7 @@ spec:
 
   source:
 
-    repoURL: 
+    repoURL: https://github.com/selva2006sk-rgb/graffana.git
 
     targetRevision: HEAD
 
